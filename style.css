@@ -1,0 +1,248 @@
+@font-face {
+    font-family: Poppins;
+    src: url(fonts/Poppins-Light.ttf);
+}
+@font-face {
+    font-family: popBold;
+    src: url(fonts/Poppins-Bold.ttf);
+}
+
+body{
+    text-transform: capitalize;
+    font-family: poppins;
+    color: white;
+    background-image: url(icons/—Pngtree—blue\ sky\ weather\ background_1229451.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+img:not(.error img){
+    filter:drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.498));
+}
+.search-bar{
+    height: 4em;
+    width: 100%;
+    position: relative;
+   
+}
+.search-bar form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.search-bar form input{
+    width: 50%;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background-color: rgba(240, 248, 255, 0.635);  
+    backdrop-filter: blur(5px);
+    margin-right: 5px;
+    transition: 0.3s;
+}
+.search-bar form input:focus{
+
+    background-color: white;
+}
+.search-bar form button{
+    height: 40px;
+    border-radius: 15px;
+    border: none;
+    background-color:rgba(240, 248, 255, 0.635);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.search-bar form button:hover{
+    background-color:white ;
+
+}
+.search-bar form .current-location{
+    height: 40px;
+    width: 40px;
+    margin-left: 10%;
+    background-color:rgba(240, 248, 255, 0.635);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+.search-bar form .current-location img{
+
+    height: 20px;
+}
+
+.search-bar form .current-location:hover{
+ background-color: white;
+}
+
+
+
+.container{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+
+.day-info, .todays-forecast, .air-conditions, .weak-weather{
+    background-color: rgba(0, 0, 0, 0.29);
+    backdrop-filter: blur(5px);
+    margin-bottom: 5px;
+    padding-top: 10px;
+    border-radius: 15px;
+}
+
+.day-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.day-info .day{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+ 
+
+}
+.day-info .day > div{
+    align-items: center;
+    
+    
+}
+.day-info .temperature{
+    display: flex;
+    justify-content: center;
+    font-size: 3em;
+    
+}
+.day-info .weather-icon{
+ padding-right: 3em;
+}
+.day-info .city-name{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 1.5em;
+}
+.day-info .weather-icon img{
+     height: 10em;
+}
+
+.todays-forecast{
+    display: flex;
+    flex-direction: row;
+}
+.todays-forecast div{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.air-conditions{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1em;
+}
+.air-conditions div{
+    width: 50%;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+.air-conditions .icon{
+    min-height: 120px;
+}
+.air-conditions .title{
+    font-size: 25px;
+   text-transform: capitalize;
+}
+.air-conditions .icon img{
+    height: 60px;
+}
+
+
+.weak-weather{
+    display: flex;
+    flex-direction: column;
+    
+}
+.weak-weather div{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    font-size: 25px;
+    border-bottom: 1px solid rgba(189, 189, 189, 0.336);
+    
+}
+.weak-weather div >div{
+    justify-content: center;
+    align-items: center;
+}
+.weak-weather .weather-img img{
+    width: 60px;
+}
+
+
+.search-bar .error{
+    background-color: white;
+    padding: 1em;
+    z-index: 1;
+    position: absolute;
+    color: red;
+    left: 15%;
+    top: 100%;
+    display: none;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.search-bar .error.active{
+    display: block;
+}
+
+.search-bar .error .error-container{
+    background-color: white;
+   position: relative;
+    color: red;
+    width: fit-content;
+    display: flex; 
+   
+
+ 
+}
+.search-bar .error .error-container img{
+    width: 20px;
+    margin-left: 10px;
+    
+}
+
+.search-bar .error .error-container .arrow{
+    position: absolute;
+ 
+    border: 20px solid rgb(255, 255, 255);
+    border-left: 20px solid rgba(0, 0, 0, 0);
+    border-top: 20px solid rgba(0, 0, 0, 0);
+    border-right: 20px solid rgba(0, 0, 0, 0);
+    
+    
+    left: 0;
+    bottom: calc(100% + 1em);
+}
