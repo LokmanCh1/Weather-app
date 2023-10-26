@@ -208,4 +208,5 @@ const weatherIcons = {
 }
 console.log(weatherIcons[0]);
 
-const map = new google.maps.Map
+const map = new google.maps.Map;
+let ss = "adf";
