@@ -208,4 +208,4 @@ const weatherIcons = {
 }
 console.log(weatherIcons[0]);
 
-const map = new google.maps.Map
+const kkk = "kkk";
